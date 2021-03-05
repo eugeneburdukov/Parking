@@ -8,7 +8,6 @@ package com.company;
 Написать программу, демонстрирующую все разработанные элементы класса.
  */
 
-import java.util.List;
 import java.util.Scanner;
 
 public class Parking {
@@ -16,17 +15,22 @@ public class Parking {
 
     public Parking(int placeAmount) {
         this.parking = new ParkingPlace[placeAmount];
-        Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i < parking.length; i++) {
-            System.out.println("Enter Car Number: ");
-            int number = scanner.nextInt();
-            parking[i] = new ParkingPlace(number);
-        }
-
-
+        createParking();
     }
 
-    public void openParking(){
+    public void createParking() {
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < parking.length; i++) {
+            System.out.println("Enter number: ");
+            int number = scanner.nextInt();
+            System.out.println("Enter Car number: ");
+            String carNumber = scanner.next();
+            System.out.println("Enter color: ");
+            String color = scanner.next();
+            System.out.println("Enter driver name: ");
+            String driverName = scanner.next();
+            parking[i] = new ParkingPlace(number, carNumber, color, driverName);
+        }
 
     }
 }

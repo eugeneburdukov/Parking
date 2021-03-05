@@ -20,6 +20,10 @@ public class ParkingPlace {
         this.number = number;
     }
 
+    public ParkingPlace(int number, String carNumber, String color, String driverName) {
+
+    }
+
     @Override
     public String toString() {
         return "ParkingPlace{" +
