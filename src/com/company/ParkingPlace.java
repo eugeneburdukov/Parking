@@ -8,6 +8,8 @@ package com.company;
 Написать программу, демонстрирующую все разработанные элементы класса.
  */
 
+import java.util.Calendar;
+
 public class ParkingPlace {
     int number;
     String carNumber;
@@ -15,13 +17,12 @@ public class ParkingPlace {
     String driverName;
     boolean free;
     boolean present;
+    double payment;
+    Calendar startTime;
 
     public ParkingPlace(int number) {
         this.number = number;
-    }
-
-    public ParkingPlace(int number, String carNumber, String color, String driverName) {
-
+        this.free = true;
     }
 
     @Override
